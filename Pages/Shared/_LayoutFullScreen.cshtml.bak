@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<!-- HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+
+    <title>@ViewData["Title"]</title>
+
+    <environment exclude="Production">
+        <!-- VENDOR CSS -->
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link href="~/lib/pace-progress/css/pace.css" rel="stylesheet">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="~/lib/fontawesome-free/css/all.css" />
+        <link rel="stylesheet" href="~/lib/simple-line-icons/css/simple-line-icons.css" />
+        <link rel="stylesheet" href="~/lib/coreui/dist/css/coreui-icons.css" />
+
+        <!-- CoreUI Theme -->
+        <link rel="stylesheet" href="~/lib/coreui/dist/css/coreui-standalone.css" />
+        <link rel="stylesheet" href="~/lib/coreui/dist/css/style.css" />
+        <link rel="stylesheet" href="~/css/CoreUI_HvH.css" asp-append-version="true" />
+
+        <!-- HvH Anpassungen -->
+        <link rel="stylesheet" href="~/css/HvH.css" />
+        <!-- Site Anpassungen -->
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+
+    <environment include="Production">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link href="~/lib/pace-progress/css/pace.min.css" rel="stylesheet">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="~/lib/fontawesome-free/css/all.min.css" />
+        <link rel="stylesheet" href="~/lib/simple-line-icons/css/simple-line-icons.css" />
+        <link rel="stylesheet" href="~/lib/coreui/dist/css/coreui-icons.min.css" />
+
+
+        <!-- CoreUI Theme -->
+        <link rel="stylesheet" href="~/lib/coreui/dist/css/coreui-standalone.css" />
+        <link rel="stylesheet" href="~/lib/coreui/dist/css/style.min.css" />
+        <link rel="stylesheet" href="~/css/CoreUI_HvH.css" asp-append-version="true" />
+
+        <!-- HvH Anpassungen -->
+        <link rel="stylesheet" href="~/css/HvH.css" asp-append-version="true" />
+        <!-- Site Anpassungen -->
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    </environment>
+
+    <!-- ICONS -->
+    <link rel="icon" type="image/x-icon" sizes="96x96" href="/favicon.ico">
+
+    @RenderSection("HtmlHead", required: false)
+
+</head>
+<!-- BODY -->
+<body class="app flex-row align-items-center">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            @RenderBody()
+        </div>
+    </div>
+
+    <!-- JavaScript-->
+    <environment exclude="Production">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="~/lib/jquery-easing/jquery.easing.js"></script>
+
+        <!-- CoreUI Theme -->
+        <script src="~/lib/pace-progress/js/pace.min.js"></script>
+        <script src="~/lib/perfect-scrollbar/dist/js/perfect-scrollbar.js"></script>
+        <script src="~/lib/coreui/dist/js/coreui.js"></script>
+
+        <!-- HvH Anpassungen -->
+        <script src="~/js/HvH.js" asp-append-version="true"></script>
+        <!-- Site Anpassungen -->
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+    </environment>
+
+    <environment include="Production">
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="~/lib/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- CoreUI Theme -->
+        <script src="~/lib/pace-progress/js/pace.min.js"></script>
+        <script src="~/lib/perfect-scrollbar/dist/js/perfect-scrollbar.min.js"></script>
+        <script src="~/lib/coreui/dist/js/coreui.min.js"></script>
+
+        <!-- HvH Anpassungen -->
+        <script src="~/js/HvH.js" asp-append-version="true"></script>
+        <!-- Site Anpassungen -->
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+    </environment>
+
+    <!-- Section Scripts -->
+    @RenderSection("Scripts", required: false)
+    <!-- End Section Scripts -->
+
+</body>
+</html>
